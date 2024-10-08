@@ -1,0 +1,20 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run a sample script
+        run: |
+          echo "Running CI workflow"
+          echo "Date: $(date)"
+
